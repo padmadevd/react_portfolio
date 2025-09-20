@@ -1,4 +1,7 @@
 import { createUseStyles } from 'react-jss';
+
+import config from '../../config';
+
 import Description from '../description/description';
 import Skills from '../skills/skills';
 import Links from '../links/links';
@@ -6,9 +9,10 @@ import Footer from '../footer/footer';
 
 let useStyle = createUseStyles({
 
-    container : {
-        background:"black",
-        color : "white",
+    container : ({config}) => ({
+
+        background: config.colorScheme[config.theme]["BG#1"],
+        color : config.colorScheme[config.theme]["FG#1"],
 
         display : "flex",
         flexDirection : "column",
@@ -18,10 +22,10 @@ let useStyle = createUseStyles({
         minWidth : 0,
         flex : 1,
 
-        borderRight: "2px solid white"
-    },
+        borderRight: `2px solid ${config.colorScheme[config.theme]["FG#1"]}`,
+    }),
 
-    topCont : {
+    topCont : ({config}) => ({
 
         display : "flex",
         flexDirection : "row",
@@ -34,10 +38,11 @@ let useStyle = createUseStyles({
         
         flex : 1,
 
-        borderBottom: "2px solid rgb(50, 50, 50)",
-    },
+        borderBottom: `2px solid ${config.colorScheme[config.theme]["FG#3"]}`,
+    }),
 
-    leftCont : {
+    leftCont : ({config}) => ({
+
         padding : "2vh",
 
         display : "flex",
@@ -48,8 +53,8 @@ let useStyle = createUseStyles({
 
         flex : 1,
 
-        borderRight: "2px solid rgb(50, 50, 50)",
-    },
+        borderRight: `2px solid ${config.colorScheme[config.theme]["FG#3"]}`,
+    }),
 
     rightCont : {
         
@@ -83,22 +88,24 @@ let useStyle = createUseStyles({
         fontFamily: "ubuntu",
         fontSize: "2vw",
     },
-    pronoun : {
+    pronoun : ({config}) => ({
+
         fontFamily: "ubuntu",
         fontSize: "1vw",
-        color : "rgb(100, 100, 100)",
-    },
-    role : {
+        color : config.colorScheme[config.theme]["FG#3"],
+    }),
+    role : ({config}) => ({
+
         fontFamily: "ubuntu",
         fontSize: ".9vw",
         fontWeight : "bold",
-        color : "rgb(100, 100, 100)",
-    }
+        color : config.colorScheme[config.theme]["FG#3"],
+    }),
 });
 
 export default function Bio({data})
 {
-    const classes = useStyle();
+    const classes = useStyle({config});
 
     return <div className={classes.container}>
         <div className={classes.topCont}>

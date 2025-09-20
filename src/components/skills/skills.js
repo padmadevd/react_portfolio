@@ -1,5 +1,7 @@
 import { createUseStyles } from 'react-jss';
 
+import config from '../../config';
+
 let useStyle = createUseStyles({
     container : {
         flex : 1,
@@ -34,16 +36,22 @@ let useStyle = createUseStyles({
         scrollbarWidth: "thin",                // Firefox
         scrollbarColor: "gray transparent",    // Firefox
     },
-    tag : {
+
+    tag : ({config}) => ({
+
+        background : config.colorScheme[config.theme]["BG#3"],
+        color : config.colorScheme[config.theme]["FG#2"],
+
         fontFamily: "ubuntu",
         fontSize: "1.7vh",
         fontWeight : "bold",
 
         padding : "0.5vh 2vh",
         margin : "0.5vh",
-        background : "rgb(50, 50, 50)",
+
         borderRadius: "1vh"
-    },
+    }),
+
     title : {
         margin : "1vh 0vh",
 
@@ -55,7 +63,7 @@ let useStyle = createUseStyles({
 
 export default function Skills({skills})
 {
-    const classes = useStyle();
+    const classes = useStyle({config});
 
     return <div className={classes.container}>
         <p className={classes.title}>Skills</p>

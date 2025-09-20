@@ -1,5 +1,9 @@
 import { createUseStyles } from 'react-jss';
 
+import config from '../../config';
+
+import { LinkIcon } from '../../icons';
+
 let useStyle = createUseStyles({
     container : {
         flex : 1,
@@ -40,7 +44,7 @@ let useStyle = createUseStyles({
         fontSize: "3vh",
         fontWeight: "bold",
     },
-    link : {
+    link : ({config}) => ({
 
         display : "flex",
         flexDirection : "row",
@@ -50,31 +54,30 @@ let useStyle = createUseStyles({
         "& a" : {
             fontFamily: "ubuntu",
             fontSize: "2vh",
-            color: "rgb(100, 150, 255)",
+            color: config.colorScheme[config.theme]["BLUE#1"],
             textDecoration:"none",
 
             margin : ".5vh",
         },
-
-        "& img" : {
-            height : "3vh",
-            margin : ".5vh",
-        },
-
         marginTop: ".5vh",
-    },
+    }),
+    icon : ({config}) => ({
+        height : "3vh",
+        margin : ".5vh",
+        fill : config.colorScheme[config.theme]["BLUE#1"],
+    }),
 });
 
 export default function Links({links})
 {
-    const classes = useStyle();
+    const classes = useStyle({config});
 
     return <div className={classes.container}>
         <p className={classes.title}>External</p>
         <div className={classes.linkContainer}>
         {links.map(({name, value})=>{
             return <div className={classes.link}>
-                <img src='/icons/link.png' alt='link icon'></img>
+                <LinkIcon className={classes.icon}></LinkIcon>
                 <a className={classes.link} href={value}>{name}</a>
             </div>;
         })}

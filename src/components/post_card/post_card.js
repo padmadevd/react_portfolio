@@ -1,9 +1,14 @@
 import { createUseStyles } from 'react-jss';
 
-let useStyle = createUseStyles({
-    container : {
+import config from '../../config';
 
-        background : "rgb(20, 20, 20)",
+import { LikeIcon, PinIcon } from '../../icons';
+
+let useStyle = createUseStyles({
+
+    container : ({config}) => ({
+
+        background : config.colorScheme[config.theme]["BG#2"],
 
         width : "40vh",
         height : "55vh",
@@ -20,12 +25,14 @@ let useStyle = createUseStyles({
         alignItems : "center",
 
         "&:hover" : {
-            border: "2px solid #ffffff",
+            border: `3px solid ${config.colorScheme[config.theme]["BLUE#1"]}`,
+            cursor: "pointer",
         },
         "&:hover > img" : {
-            border: "2px solid #ffffff",
+            border: `3px solid ${config.colorScheme[config.theme]["BLUE#1"]}`,
         },
-    },
+
+    }),
     img : {
 
         width : "35vh",
@@ -38,17 +45,20 @@ let useStyle = createUseStyles({
         fontFamily: "ubuntu",
         fontSize: "3vh",
     
-        width: "30vh",          
+        width: "30vh",
         whiteSpace: "nowrap",
         overflow: "hidden",
         textOverflow: "ellipsis",
 
         margin : "1vh",
     },
-    button : {
+    button : ({config}) => ({
+
         width : "4vh",
         margin : "2vh",
-    },
+
+        fill : config.colorScheme[config.theme]["FG#1"],
+    }),
     buttonContainer : {
         display : "flex",
         flexDirection : "row",
@@ -58,15 +68,15 @@ let useStyle = createUseStyles({
     }
 })
 
-export default function PostCard({post})
+export default function PostCard({post, ...props})
 {
-    const classes = useStyle();
-    return <div className={classes.container}>
+    const classes = useStyle({config});
+    return <div className={classes.container} {...props}>
         <img className={classes.img} src={post.images[0]} alt="post"></img>
         <p className={classes.caption}>{post.caption}</p>
         <div className={classes.buttonContainer}>
-            <img className={classes.button} src="/icons/like.png" alt="like icon"></img>
-            <img className={classes.button} src="/icons/pin.png" alt="pin icon"></img>
+            <PinIcon className={classes.button}> </PinIcon>
+            <LikeIcon className={classes.button}> </LikeIcon>
         </div>
     </div>;
 }

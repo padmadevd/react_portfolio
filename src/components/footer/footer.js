@@ -1,7 +1,12 @@
 import { createUseStyles } from 'react-jss';
 
+import config from '../../config';
+
+import { SettingsIcon, LightModeIcon, DarkModeIcon, SendIcon, FormDownloadIcon } from '../../icons';
+
 let useStyle = createUseStyles({
-    container : {
+
+    container : ({config}) => ({
 
         display : "flex",
         flexDirection : "row",
@@ -10,21 +15,38 @@ let useStyle = createUseStyles({
 
         padding : "2vh",
 
-        borderTop: "2px solid rgb(50, 50, 50)",
+        borderTop: `2px solid ${config.colorScheme[config.theme]["FG#3"]}`,
+    }),
+    button : ({config}) => ({
 
-        "& img" : {
-            height : "5vh",
-        }
-    }
+        height : "5vh",
+        "&:hover" : {
+            cursor: "pointer",
+        },
+
+        fill : config.colorScheme[config.theme]["FG#1"],
+    }),
 });
+
+function themeButtonHandler(e)
+{
+    if(config.theme == "dark")
+    {
+        config.setTheme("light");
+    }
+    else
+    {
+        config.setTheme("dark");
+    }
+}
 
 export default function Footer()
 {
-    const classes = useStyle();
+    const classes = useStyle({config});
     return <div className={classes.container}>
-        <img src="/icons/settings.png" alt=""></img>
-        <img src="/icons/light_mode.png" alt=""></img>
-        <img src="/icons/send.png" alt=""></img>
-        <img src="/icons/download.png" alt=""></img>
+        <SettingsIcon className={classes.button}> </SettingsIcon>
+        {config.theme == "dark" ? <LightModeIcon onClick={themeButtonHandler} className={classes.button}> </LightModeIcon> : <DarkModeIcon onClick={themeButtonHandler} className={classes.button}> </DarkModeIcon>}
+        <SendIcon className={classes.button}> </SendIcon>
+        <FormDownloadIcon className={classes.button}> </FormDownloadIcon>
     </div>
 }

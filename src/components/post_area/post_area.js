@@ -1,8 +1,15 @@
 import { createUseStyles } from 'react-jss';
+
+import config from '../../config';
+
 import PostCard from '../post_card/post_card';
 
 let useStyle = createUseStyles({
-    container : {
+
+    container : ({config}) => ({
+
+        background: config.colorScheme[config.theme]["BG#1"],
+        color : config.colorScheme[config.theme]["FG#1"],
 
         flex : 1,
 
@@ -12,7 +19,7 @@ let useStyle = createUseStyles({
         alignItems : "center",
 
         margin : "2vh 0vh",
-    },
+    }),
     title : {
 
         margin : "2vh 0vh",
@@ -46,15 +53,24 @@ let useStyle = createUseStyles({
     },
 })
 
+function postClickHandler(event, postId)
+{
+    if(config.activeWindow == "null")
+    {
+        config.postConfig.postId = postId;
+        config.setActiveWindow("post");
+    }
+}
+
 export default function PostArea({data})
 {
-    const classes = useStyle();
+    const classes = useStyle({config});
 
     return <div className={classes.container}>
         <p className={classes.title}> Posts </p>
         <div className={classes.postContainer}>
             {data.map(post => {
-                return <PostCard post={post}/>
+                return <PostCard post={post} onClick={(event)=>{postClickHandler(event, post.id)}}/>
             })}
         </div>
     </div>;
