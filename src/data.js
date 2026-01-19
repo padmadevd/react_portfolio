@@ -51,7 +51,7 @@ let data = {
   posts : [
     {
       id : 0,
-      images : ["/posts/1/img1.jpg", "/posts/1/img2.jpg", "/posts/1/img3.jpg", "/posts/1/img4.jpg"],
+      images : ["posts/1/img1.jpg", "posts/1/img2.jpg", "posts/1/img3.jpg", "posts/1/img4.jpg"],
       caption : "A post card demo A post card demo",
       details :`Padmadev woke up 🌅 with fresh ideas buzzing in his mind.
                 He brewed a warm cup of tea ☕ to kickstart the day.
@@ -67,37 +67,37 @@ let data = {
       comments : [
         {
           userName : "padmadev",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "This is my first comment 🚀",
           likes : 12,
         },
         {
           userName : "alex",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Nice post! Really enjoyed reading it 😃",
           likes : 8,
         },
         {
           userName : "sophia",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Thanks for sharing this, super helpful 🙌",
           likes : 15,
         },
         {
           userName : "padmadev",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "This is my first comment 🚀",
           likes : 12,
         },
         {
           userName : "alex",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Nice post! Really enjoyed reading it 😃",
           likes : 8,
         },
         {
           userName : "sophia",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Thanks for sharing this, super helpful 🙌",
           likes : 15,
         },
@@ -105,7 +105,7 @@ let data = {
     },
     {
       id : 1,
-      images : ["/posts/1/img2.jpg",],
+      images : ["posts/1/img2.jpg",],
       caption : "A post card demo A post card demo",
       details :`Padmadev woke up 🌅 with fresh ideas buzzing in his mind.
                 He brewed a warm cup of tea ☕ to kickstart the day.
@@ -121,19 +121,19 @@ let data = {
       comments : [
         {
           userName : "padmadev",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "This is my first comment 🚀",
           likes : 12,
         },
         {
           userName : "alex",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Nice post! Really enjoyed reading it 😃",
           likes : 8,
         },
         {
           userName : "sophia",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Thanks for sharing this, super helpful 🙌",
           likes : 15,
         },
@@ -141,7 +141,7 @@ let data = {
     },
     {
       id : 2,
-      images : ["/posts/1/img4.jpg", "/posts/1/img1.jpg", "/posts/1/img2.jpg", "/posts/1/img3.jpg", ],
+      images : ["posts/1/img4.jpg", "posts/1/img1.jpg", "posts/1/img2.jpg", "posts/1/img3.jpg", ],
       caption : "A post card demo A post card demo",
       details :`Padmadev woke up 🌅 with fresh ideas buzzing in his mind.
                 He brewed a warm cup of tea ☕ to kickstart the day.
@@ -157,31 +157,31 @@ let data = {
       comments : [
         {
           userName : "padmadev",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "This is my first comment 🚀",
           likes : 12,
         },
         {
           userName : "alex",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Nice post! Really enjoyed reading it 😃",
           likes : 8,
         },
         {
           userName : "sophia",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Thanks for sharing this, super helpful 🙌",
           likes : 15,
         },
         {
           userName : "padmadev",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "This is my first comment 🚀",
           likes : 12,
         },
         {
           userName : "alex",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Nice post! Really enjoyed reading it 😃",
           likes : 8,
         },
@@ -189,7 +189,7 @@ let data = {
     },
     {
       id : 3,
-      images : ["/posts/1/img1.jpg", "/posts/1/img2.jpg", "/posts/1/img3.jpg", "/posts/1/img4.jpg"],
+      images : ["posts/1/img1.jpg", "posts/1/img2.jpg", "posts/1/img3.jpg", "posts/1/img4.jpg"],
       caption : "A post card demo A post card demo A post card demo",
       details :`Padmadev woke up 🌅 with fresh ideas buzzing in his mind.
                 He brewed a warm cup of tea ☕ to kickstart the day.
@@ -205,49 +205,49 @@ let data = {
       comments : [
         {
           userName : "padmadev",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "This is my first comment 🚀",
           likes : 12,
         },
         {
           userName : "alex",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Nice post! Really enjoyed reading it 😃",
           likes : 8,
         },
         {
           userName : "sophia",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Thanks for sharing this, super helpful 🙌",
           likes : 15,
         },
         {
           userName : "padmadev",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "This is my first comment 🚀",
           likes : 12,
         },
         {
           userName : "alex",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Nice post! Really enjoyed reading it 😃",
           likes : 8,
         },
         {
           userName : "sophia",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Thanks for sharing this, super helpful 🙌",
           likes : 15,
         },
         {
           userName : "padmadev",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "This is my first comment 🚀",
           likes : 12,
         },
         {
           userName : "alex",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Nice post! Really enjoyed reading it 😃",
           likes : 8,
         },
@@ -255,7 +255,7 @@ let data = {
     },
     {
       id : 4,
-      images : ["/posts/1/img2.jpg", "/posts/1/img3.jpg", "/posts/1/img4.jpg", "/posts/1/img1.jpg"],
+      images : ["posts/1/img2.jpg", "posts/1/img3.jpg", "posts/1/img4.jpg", "posts/1/img1.jpg"],
       caption : "A post card demo",
       details :`Padmadev woke up 🌅 with fresh ideas buzzing in his mind.
                 He brewed a warm cup of tea ☕ to kickstart the day.
@@ -271,19 +271,19 @@ let data = {
       comments : [
         {
           userName : "sophia",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Thanks for sharing this, super helpful 🙌",
           likes : 15,
         },
         {
           userName : "padmadev",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "This is my first comment 🚀",
           likes : 12,
         },
         {
           userName : "alex",
-          profile : "/images/profile_blank.jpg",
+          profile : "images/profile_blank.jpg",
           content : "Nice post! Really enjoyed reading it 😃",
           likes : 8,
         },
