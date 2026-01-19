@@ -75,8 +75,8 @@ export default function Links({links})
     return <div className={classes.container}>
         <p className={classes.title}>External</p>
         <div className={classes.linkContainer}>
-        {links.map(({name, value})=>{
-            return <div className={classes.link}>
+        {links.map(({name, value, index})=>{
+            return <div key={index} className={classes.link}>
                 <LinkIcon className={classes.icon}></LinkIcon>
                 <a className={classes.link} href={value}>{name}</a>
             </div>;
