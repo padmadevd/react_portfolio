@@ -37,19 +37,19 @@ let _useStyle = createUseStyles({
     "@font-face": [
       {
         fontFamily: "ubuntu",
-        src: "url('fonts/ubuntu/Ubuntu-Regular.ttf') format('truetype')",
+        src: "url('/fonts/ubuntu/Ubuntu-Regular.ttf') format('truetype')",
         fontWeight: "normal",
         fontStyle: "normal",
       },
       {
         fontFamily: "ubuntu",
-        src: "url('fonts/ubuntu/Ubuntu-Bold.ttf') format('truetype')",
+        src: "url('/fonts/ubuntu/Ubuntu-Bold.ttf') format('truetype')",
         fontWeight: "bold",
         fontStyle: "normal",
       },
       {
         fontFamily: "ubuntu",
-        src: "url('fonts/ubuntu/Ubuntu-Italic.ttf') format('truetype')",
+        src: "url('/fonts/ubuntu/Ubuntu-Italic.ttf') format('truetype')",
         fontWeight: "normal",
         fontStyle: "italic",
       },

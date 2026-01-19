@@ -68,7 +68,7 @@ export default function Skills({skills})
     return <div className={classes.container}>
         <p className={classes.title}>Skills</p>
         <div className={classes.tagContainer}>        
-            {skills.map(skill => (<p className={classes.tag}>{skill}</p>))}
+            {skills.map((skill, index) => (<p key={index} className={classes.tag}>{skill}</p>))}
         </div>
     </div>;
 }

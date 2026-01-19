@@ -111,8 +111,8 @@ export default function Post({postData})
 
     return <div className={classes.container}>
         <div className={classes.imgContainer}>
-            {postData.images.map(image => (
-                <img className={classes.img} src={image} alt=""></img>
+            {postData.images.map((image, index) => (
+                <img key={index} className={classes.img} src={image} alt=""></img>
             ))}
         </div>
         <div className={classes.rightCont}>
